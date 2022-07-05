@@ -2,4 +2,12 @@
 
 # Identify 2-3 changes that can be made to our environment to prevent an ssh brute force attack from the internet.
 
+- Close the SSH Port or disable SSH completely on the server. 
+- Use AWS Systems Manager which is recommended from AWS Side
+- Move the Instances to a private subnet
+- Use 3rd Party tools to block users that use Brute Force type attacks
+
 # Neither instance should have had access to the secret recipes bucket, in the even that instance API credentials were compromised how could we have prevented access to sensitive data.
+
+- Client Side encryption
+- Enforce Additional Certificaes to be used

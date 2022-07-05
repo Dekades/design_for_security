@@ -2,12 +2,39 @@
 
 ## Scan infrastructure as code templates
 
+- Checkov ( most common one)
+- TFLint
+- Terrafirma
+- Accurics
+et...
+
 ### Example vulnerability
+
+- Missconfigurations that would expose Data to the public Internet
+- Common vulnerabilities are contained - these would be found by e.g. Checkov
+
+--------------
 
 ##Scan AMI’s or containers for OS vulnerabilities
 
+- Clair
+- Anchore
+- Dagda
+- Falco
+- etc.
+
+
 ### Example vulnerability
+
+- prevent that compromised images containing malicious components or just containing known vulnerabilities due to old versions are being deployed ( e.g. from untrusted sources)
+
+--------------
 
 ##Scan an AWS environment for cloud configuration vulnerabilities
 
+AWS Security Hub, AWS Inspector, AWS Config
+
 ### Example vulnerability
+
+Example: Open Ports that can be reached from the internet, 
+and lots of other bad practises are shown in those tools that provide opportunities for hackers to gain access to the system.

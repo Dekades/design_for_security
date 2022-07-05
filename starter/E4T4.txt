@@ -1,8 +1,17 @@
 
 # What additional architectural change can be made to reduce the internet facing attack surface of the web application instance.
 
+The application instance should be moved to a private subnet to add extra security. Additional Certificates would also help, though would not limit the actual interface facing surface. 
+
 # Assuming the IAM permissions for the S3 bucket are still insecure, would creating VPC private endpoints for S3 prevent the unauthorized access to the secrets bucket.
+
+In my opinion this won´t help, as long as the App-instance is still in the public VPC.
 
 # Will applying default encryption setting to the s3 buckets encrypt the data that already exists?
 
+No, only Data coming from the change of this settings onwards will be encrypted, but it could be manually encryptet with the same Keys.
+
 # What would happen if the original cloud formation templates are applied to this environment.
+
+All services deployed via IAC / so Cloudformatio or e.g. Terraform should only be managed via making changes there, and never manually.
+I am not the expert with Cloudformation, but  the manually changed Components could be overwritten, and also the State/tracking  could get out of sync.

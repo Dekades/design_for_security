@@ -1,3 +1,12 @@
 Research and analyze which of the vulnerabilities appear to be related to the code that was deployed for the environment in this project.
 
-Bonus - provide recommendations on how to remediate the vulnerabilities.
+
+S3 Buckets:
+    - miss server side encription, should be enabled, also is publicly available, even if they don´t need public access
+
+EC2:
+    - All ports are currently open, only the really necessary port(s) should be allowed / restricted via e.g. ACL
+    - S3 Bucket is internet facing / public, even though only the load balancer would need it - should be removed
+VPC:
+    - default security group should not allow inbound and outbound traffic  - should be adapted in cloudformation
+

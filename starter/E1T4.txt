@@ -2,4 +2,10 @@ Based on the architecture diagram, and the steps you have taken so far to upload
 
 # Poor practice 1
 
+The business users should not be enabled to directly access the Secret Recipe Vault. An additional service like an internet Gateway with Authentication + Authorisation should be added to be able to monitor and controle the access
+
 # Poor practice 2
+
+All components that don´t have to be in the public subnet shoudl be put into a private subnet, and least priviledge should be used to connect components betweem public and private subnet where needed.
+
+
